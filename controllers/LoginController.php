@@ -4,6 +4,8 @@ require_once 'models/UserModel.php'; // Includes the UserModel to handle user-re
 class LoginController {
     public function handleRequest() {
         $userModel = new UserModel(); // Create a new UserModel object.
+        $success = $_SESSION['success'] ?? null;
+        unset($_SESSION['success']);
 
         // Handle POST request for login.
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {

@@ -1,6 +1,8 @@
 <h2>Login</h2>
 
 <?php
+if (isset($success)) echo "<p style='color:green;'>" . htmlspecialchars($success) . "</p>";
+
 // If there is an error, display it in a red-colored paragraph
 if (isset($error)) echo "<p style='color:red;'>$error</p>";
 ?>
